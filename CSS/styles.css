@@ -1,0 +1,36 @@
+/* Estilos del header */
+
+header {
+    display: flex;
+    align-items: center;}
+header img {
+    text-align:left;}
+header nav{
+    text-align: center; }
+header nav ul {
+    list-style: none;}
+header nav ul li a {
+    text-decoration: none;
+    color: #a31721;
+    font-weight: bold;
+}
+
+
+    /* Estilos del main */
+
+main h1 {
+    text-align: center;
+    color: #5db9de;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+}
+main h2 {
+    text-transform: uppercase;
+}
+
+
+/* Estilos del footer */
+footer {
+    text-align: center;
+    text-decoration: underline;
+    }
