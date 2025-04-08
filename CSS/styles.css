@@ -1,14 +1,35 @@
+/* reset */
+*{ 
+    margin: 0;   
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Estilos del header */
 
 header {
     display: flex;
-    align-items: center;}
+    align-items: center;
+    background-color: #5db9de;
+    justify-content: start;
+    height: 150px;
+}   
+
 header img {
     text-align:left;}
-header nav{
-    text-align: center; }
+
+header nav {
+    text-align: center;
+    bottom: 0;
+        
+}
+
 header nav ul {
-    list-style: none;}
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding-left: 75px;}
+
 header nav ul li a {
     text-decoration: none;
     color: #a31721;
@@ -21,16 +42,106 @@ header nav ul li a {
 main h1 {
     text-align: center;
     color: #5db9de;
+    padding: 20px 0;
     text-transform: uppercase;
     font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 3rem;
+    background-color: #ffffff;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+}
+h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #a31721, #000000);
+    z-index: -1;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+    animation: slideIn 2s ease-out forwards;
 }
 main h2 {
     text-transform: uppercase;
 }
 
+/*INDEX*/
+.img-index {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/*PRODUCTOS*/
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.columna {
+    background-color: #ffffff;
+    border: 1px solid #5db9de;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    }
+
+.columna:hover {
+    box-shadow: 0 6px 20px;
+  }
+  
+  .columna img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .titulo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000000;
+    margin: 10px 0 5px;
+  }
+  
+  .precio {
+    font-size: 1rem;
+    color: #0077cc;
+    font-weight: 500;
+  }
+
+  /* MEDIA QUERIES */
+  @media (min-width: 600px) {
+    .img-index { 
+        width: 100%;
+    }
+    .contenedor {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 900px) {
+    .img-index {
+        width: 80%;
+    }
+    .contenedor {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 
 /* Estilos del footer */
 footer {
     text-align: center;
     text-decoration: underline;
+    background-color: #5db9de;
+    padding: 10px;
+    text-transform: uppercase;
     }
