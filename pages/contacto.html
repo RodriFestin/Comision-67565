@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La Clave - Tu tienda de confianza">
     <link rel="stylesheet" href="../CSS/styles.css">
     <title>contacto</title>
     
@@ -10,7 +10,9 @@
 
 <body>
     <header>
+        <a href="../index.html">
         <img src="../img/logo.jpeg" alt="Logo de marca">
+        </a>
         <nav>
             <ul>
                     <li><a href="../index.html">Inicio</a></li>
@@ -24,12 +26,34 @@
 
     <main>
         <h1>Contacto</h1>
-        <h2>Nuestra informacion</h2>
 
-        <p>Direccion: Australia 627, Neuquen, Argentina</p>
-        <p>Telefono: +54 299 123-4567</p>
-        <p>Mail: contacto@laclave.com</p>
+        <div class="contacto-container">
+        <div class="contacto-info">
+            <h2>Nuestra información</h2>
+            <p>Dirección: Australia 627, Neuquén, Argentina</p>
+            <p>Teléfono: +54 299 123-4567</p>
+            <p>Mail: contacto@laclave.com</p>
+        </div>
 
+        <div class="contacto-form">
+            <h2>Envíanos tu consulta</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre y Apellido:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="consulta">Consulta:</label>
+                    <textarea id="consulta" name="consulta" rows="5" required></textarea>
+                </div>
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </div>
+    </div>
 
     </main>
 

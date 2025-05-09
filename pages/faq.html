@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La Clave - Tu tienda de confianza">
     <link rel="stylesheet" href="../CSS/styles.css">
     <title>Preguntas Frecuentes</title>
 
@@ -10,7 +10,9 @@
 
 <body>
     <header>
+        <a href="../index.html">
         <img src="../img/logo.jpeg" alt="Logo de marca">
+        </a>
         <nav>
             <ul>
                     <li><a href="../index.html">Inicio</a></li>
@@ -24,19 +26,44 @@
     
     <main>
         <h1>Preguntas frecuentes</h1>
-        <h2>¿Realizan envios?</h2>
-        <p>Si, hacemos envios a todo el pais</p>
 
-        <h2>¿Tienen garantia?</h2>
-        <p>Todos los productos tienen garantia de 6 meses</p>
+        <div class="faq-item">
+        <button class="faq-question">¿Realizan envíos?</button>
+        <div class="faq-answer">
+            <p>Sí, hacemos envíos a todo el país.</p>
+        </div>
+        </div>
 
-        <h2>¿Aeptan devoluciones?</h2>
-        <p>Si, dentro de los primeros 15 dias con el producto en buen estado</p>
+        <div class="faq-item">
+        <button class="faq-question">¿Tienen garantía?</button>
+        <div class="faq-answer">
+            <p>Todos los productos tienen garantía de 6 meses.</p>
+        </div>
+        </div>
+
+        <div class="faq-item">
+        <button class="faq-question">¿Aceptan devoluciones?</button>
+        <div class="faq-answer">
+            <p>Sí, dentro de los primeros 15 días con el producto en buen estado.</p>
+        </div>
+        </div>
+
     </main>
 
     <footer>
         <p>Todos los derechos reservados.</p>
     </footer>
+        
+<script>
+    const faqQuestions = document.querySelectorAll('.faq-question');
 
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            question.classList.toggle('active');
+            const answer = question.nextElementSibling;
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+</script>
 </body>
 </html>
