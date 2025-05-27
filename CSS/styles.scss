@@ -1,0 +1,411 @@
+$color-principal: #5db9de;
+
+
+/* reset */
+*{ 
+    margin: 0;   
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del header */
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: $color-principal;
+    justify-content: start;
+    height: 150px;
+}   
+
+header img {
+    text-align:left;}
+
+header nav {
+    text-align: center;
+    bottom: 0;
+        
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding-left: 75px;}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #a31721;
+    font-weight: bold;
+}
+
+
+    /* Estilos del main */
+.index-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.index-contenedor {
+    margin-top: 40px;
+}
+
+.index-texto {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.index-img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.ver-mas-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: $color-principal;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.ver-mas-btn:hover {
+    background-color: #4298bc;
+}
+.index-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+main h1 {
+    text-align: center;
+    color: $color-principal;
+    padding: 20px 0;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 3rem;
+    background-color: #ffffff;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+}
+h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #a31721, #000000);
+    z-index: -1;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+    animation: slideIn 2s ease-out forwards;
+}
+main h2 {
+    text-transform: uppercase;
+}
+
+/*INDEX*/
+.img-index {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/*PRODUCTOS*/
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.columna {
+    background-color: #ffffff;
+    border: 1px solid $color-principal;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    }
+
+.columna:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .columna img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .titulo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000000;
+    margin: 10px 0 5px;
+  }
+  
+  .precio {
+    font-size: 1rem;
+    color: #0077cc;
+    font-weight: 500;
+  }
+
+
+
+/* Estilos del footer */
+footer {
+    text-align: center;
+    text-decoration: underline;
+    background-color: $color-principal;
+    padding: 10px;
+    text-transform: uppercase;
+    }
+
+  /* NOSOTROS */
+
+  .nosotros-section {
+    margin-bottom: 30px;          /* Espacio entre secciones */
+    padding: 20px;               /* Espacio dentro de cada sección */
+    background-color: #f8f8f8;    /* Fondo */
+    border-radius: 8px;           /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.nosotros-section h2 {
+    font-size: 1.5em;
+    color: $color-principal;             /* Color del título */
+    margin-bottom: 15px;          /* Espacio debajo del título */
+    text-transform: uppercase;   /* Título en mayúsculas */
+    border-bottom: 2px solid #ddd; /* Línea debajo del título */
+    padding-bottom: 10px;         /* Espacio debajo de la línea */
+}
+
+.nosotros-section p {
+    font-size: 1.1em;
+    color: #333;               
+    line-height: 1.6;           /* Espaciado entre líneas */
+}
+
+/* CONTACTO */
+
+
+.contacto-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+    gap: 10px; /* Espacio entre columnas */
+}
+
+.contacto-info {
+    width: 45%;              /* Ancho original */
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mapa {
+    margin-top: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contacto-form {
+    width: 45%;              /* Ancho original */
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-form h2 {
+    font-size: 1.5em;
+    color: $color-principal;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contacto-form button {
+    background-color: $color-principal;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.contacto-form button:hover {
+    background-color: #4298bc;
+}
+
+/* FAQ */
+
+.faq-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.faq-question {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: $color-principal;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question::after {
+    content: '+';
+    font-size: 1.5em;
+}
+
+.faq-question.active::after {
+    content: '-';
+}
+
+.faq-answer {
+    padding: 10px;
+    display: none; /* Oculta las respuestas inicialmente */
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+/* Media query para pantallas más anchas */
+@media (min-width: 768px) {
+    .faq-item {
+        padding-bottom: 30px;
+    }
+
+    .faq-question {
+        font-size: 1.5em;
+        padding: 15px;
+    }
+
+    .faq-answer {
+        padding: 15px;
+    }
+}
+
+
+
+/* Media Queries para tablet*/
+@media (min-width: 768px) {
+    .info-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .contenedor {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .index.texto {
+        width: 40%;
+    }
+
+    .index-img {
+        max-width: 40%;
+    }
+    .nosotros-section {
+      display: flex;             
+      flex-direction: column;   /* Alinea en columna */
+      align-items: flex-start;  /* Alinea al inicio */
+      text-align: left;         /* Alinea texto a la izquierda */
+    }
+    .nosotros-section h2 {
+      width: 20%;               /* Ancho del título */
+      margin-right: 20px;       /* Espacio a la derecha del título */
+      border-bottom: none;      /* Quitar la línea debajo del título */
+      padding-bottom: 0;        /* Quitar el padding debajo del título */
+    }
+  .nosotros-section p {
+      width: 80%;               /* Ancho del párrafo */
+    }
+}
+
+/* Media Queries para Desktop */
+@media (min-width: 900px) {
+    .index-texto {
+        width: 30%; 
+    }
+
+    .index-img {
+        max-width: 40%;
+    }
+    .contenedor {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* Media query para celulares */
+@media (max-width: 767px) {
+    .contacto-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contacto-info,
+    .contacto-form {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
